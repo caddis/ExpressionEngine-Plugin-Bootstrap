@@ -3,45 +3,46 @@
 /**
  * Bootstrap plugin
  *
- * @package    bootstrap
- * @author     Your Name <name@example.com>
- * @link       https://www.example.co
- * @copyright  Copyright (c) 2015, Caddis Interactive, LLC
+ * @package bootstrap
+ * @author Your Name <name@caddis.co>
+ * @link https://www.caddis.co
+ * @copyright Copyright (c) 2015, Caddis Interactive, LLC
  */
 
 $plugin_info = array (
 	'pi_name' => 'Bootstrap',
 	'pi_version' => '1.0.0',
 	'pi_author' => 'Your Name',
-	'pi_author_url' => 'https://www.example.co',
-	'pi_description' => 'A pithy description'
+	'pi_author_url' => 'https://www.caddis.co',
+	'pi_description' => 'A pithy description',
+	'pi_usage' => Bootstrap::usage()
 );
 
 class Bootstrap
 {
-	/**
-	 * Constructor
-	 */
 	public function __construct()
 	{
 		// Do constructor stuff here if needed such as loading the model
 		ee()->load->model('bootstrap_model');
 
-		// Get the namespace param or set a default
+		// Get the namespace parameter or set a default
 		$this->namespace = ee()->TMPL->fetch_param('namespace', 'foo') . ':';
 	}
 
 	/**
-	 * Tag Pair tag
+	 * Process tag pair contents
 	 *
 	 * @return string
 	 */
 	public function tag_pair()
 	{
+		// Get the tag data
+		$tagdata = ee()->TMPL->tagdata;
+
 		// Get the limit parameter or set a default of 15
 		$limit = ee()->TMPL->fetch_param('limit', 15);
 
-		// Get stuff from the model
+		// Get data
 		$entries = ee()->bootstrap_model->myCustomDatabaseMethod(array(
 			'limit' => $limit
 		));
@@ -51,7 +52,7 @@ class Bootstrap
 			return false;
 		}
 
-		// Start vars array
+		// Start variables array
 		$vars = array();
 
 		// Namespace the vars
@@ -62,19 +63,27 @@ class Bootstrap
 		}
 
 		// Parse tag pair variables
-		return ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $vars);
-
-		// Or return a string for a single tag:
-		return 'Hello World';
+		return ee()->TMPL->parse_variables($tagdata, $vars);
 	}
 
 	/**
-	 * Single tag
+	 * Process single tag
 	 *
 	 * @return string
 	 */
 	public function single_tag()
 	{
+		// Return a string for a single tag
 		return 'Hello World';
+	}
+
+	/**
+	 * Add usage information to Control Panel
+	 *
+	 * @return string
+	 */
+	public static function usage()
+	{
+		return 'See docs and examples on GitHub: https://github.com/account/repo-name';
 	}
 }

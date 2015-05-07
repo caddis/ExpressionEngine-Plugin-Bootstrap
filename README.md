@@ -1,16 +1,16 @@
 # ExpressionEngine Plugin Boostrap
 
-Fork or copy this repo to get started on a new ExpressionEngine plugin.
+Fork or clone this repo to get started on a new ExpressionEngine plugin.
 
 Then:
 
 1. Rename the bootstrap directory and contained files to the appropriate plugin name.
 2. Fill in the correct values in the (renamed) pi.bootstrap.php and bootstrap_model.php files. Take care to change the class names but observe the correct cases and underscores.
-3. Update the values in chnagelog.md, package.json, and this readme.md file.
+3. Update the values in changelog.md, package.json, and this readme.md file.
 
 ## License
 
-Copyright 2014 Caddis Interactive, LLC
+Copyright 2015 Caddis Interactive, LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

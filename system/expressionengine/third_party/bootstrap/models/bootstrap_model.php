@@ -3,10 +3,10 @@
 /**
  * Bootstrap plugin
  *
- * @package    bootstrap
- * @author     Your Name <name@example.com>
- * @link       https://www.example.co
- * @copyright  Copyright (c) 2015, Caddis Interactive, LLC
+ * @package bootstrap
+ * @author Your Name <name@caddis.co>
+ * @link https://www.caddis.co
+ * @copyright Copyright (c) 2015, Caddis Interactive, LLC
  */
 
 class Bootstrap_model extends CI_Model

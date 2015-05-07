@@ -3,7 +3,9 @@
 	"name" : "bootstrap",
 	"label": "Bootstrap",
 	"version": "1.0.0",
-	"types": ["plugin"],
+	"types": [
+		"plugin"
+	],
 	"paths": {
 		"system": [
 			"system/expressionengine/third_party/bootstrap"
