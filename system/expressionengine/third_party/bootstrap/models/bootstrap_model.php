@@ -1,11 +1,11 @@
 <?php if (! defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Bootstrap plugin
+ * Bootstrap model
  *
  * @package bootstrap
  * @author Your Name <name@caddis.co>
- * @link https://www.caddis.co
+ * @link https://github.com/caddis/expressionengine-plugin-bootstrap
  * @copyright Copyright (c) 2015, Caddis Interactive, LLC
  */
 
